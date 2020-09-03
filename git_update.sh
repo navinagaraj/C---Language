@@ -7,10 +7,14 @@
 #/************************************************/
 
 #!/bin/bash
-git status
+git branch  # To determine what branch the local repository is on
+git status  # To get a status of repository
+git log     # To show the chronological commit history for a repository
 echo "Enter 1 git commit"
 echo "Enter 2 to exit"
 read data_re # Read data from user
+
+
 if [ 1 == $data_re ]
 then
   git add -A  
@@ -21,5 +25,5 @@ then
   git pull		# pull a repository
 
 else
-   exit
+   exit 0
 fi
